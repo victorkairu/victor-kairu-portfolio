@@ -1,0 +1,548 @@
+/* ---------- GENERAL SETTINGS ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* ---------- NAVIGATION ---------- */
+
+header {
+    background: #111827;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav h2 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #38bdf8;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+
+section {
+    padding: 70px 20px;
+}
+
+
+/* ---------- HOME ---------- */
+
+#home {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+#home h2 {
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+#home p {
+    max-width: 650px;
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+#home a {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+#home a:hover {
+    background: #1d4ed8;
+}
+
+
+/* ---------- HEADINGS ---------- */
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+
+/* ---------- ABOUT ---------- */
+
+#about p {
+    margin-bottom: 15px;
+    max-width: 750px;
+}
+
+
+/* ---------- SKILLS ---------- */
+
+#skills ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#skills li {
+    background: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ---------- PROJECTS ---------- */
+
+article {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+article h3 {
+    color: #2563eb;
+    margin-bottom: 15px;
+}
+
+article p {
+    margin-bottom: 10px;
+}
+
+
+/* ---------- CONTACT ---------- */
+
+#contact a {
+    color: #2563eb;
+}
+
+
+/* ---------- FOOTER ---------- */
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+
+/* ---------- MOBILE PHONE ---------- */
+
+@media (max-width: 600px) {
+
+    nav ul li {
+        margin-right: 8px;
+        margin-bottom: 8px;
+    }
+
+    #home h1 {
+        font-size: 35px;
+    }
+
+    #home h2 {
+        font-size: 23px;
+    }
+
+    section {
+        padding: 50px 10px;
+    }
+}
+/* ---------- HERO SECTION ---------- */
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 750px;
+}
+
+.intro {
+    color: #2563eb;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #2563eb;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 19px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.github-btn {
+    background: #111827;
+}
+
+.github-btn:hover {
+    background: #374151;
+}
+
+
+/* ---------- MOBILE HERO ---------- */
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+}
+/* ---------- SKILLS CARDS ---------- */
+
+.section-intro {
+    max-width: 700px;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.skill-card h3 {
+    color: #2563eb;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #666;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* ---------- MOBILE SKILLS ---------- */
+
+@media (max-width: 700px) {
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ---------- CONTACT ---------- */
+
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.contact-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card h3 {
+    color: #2563eb;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    margin-bottom: 20px;
+}
+
+.contact-link {
+    display: inline-block;
+    background: #2563eb;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover {
+    background: #1d4ed8;
+}
+
+
+/* ---------- MOBILE CONTACT ---------- */
+
+@media (max-width: 700px) {
+
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+/* ---------- MOBILE MENU ---------- */
+
+#menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+@media (max-width: 600px) {
+
+    #menu-button {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+    }
+
+    nav ul {
+        display: none;
+        margin-top: 20px;
+    }
+
+    nav ul.active {
+        display: block;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+    }
+
+}
+/* ---------- THEME BUTTON ---------- */
+
+#theme-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+
+/* ---------- DARK MODE ---------- */
+
+body.dark-mode {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+body.dark-mode .skill-card,
+body.dark-mode .project-card,
+body.dark-mode .career-card,
+body.dark-mode .contact-card {
+    background: #1f2937;
+    color: #f3f4f6;
+}
+
+body.dark-mode .skill-card p,
+body.dark-mode .contact-card p {
+    color: #d1d5db;
+}
+
+body.dark-mode .project-tech span {
+    background: #374151;
+}
+
+body.dark-mode .project-status,
+body.dark-mode .skill-card h3,
+body.dark-mode .project-card h3,
+body.dark-mode .career-card h3,
+body.dark-mode .contact-card h3 {
+    color: #60a5fa;
+}
+/* ---------- TYPING EFFECT ---------- */
+
+#typing-text::after {
+    content: "|";
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+/* ---------- ABOUT SECTION ---------- */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+}
+
+.about-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.highlight {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.highlight h3 {
+    color: #2563eb;
+    margin-bottom: 5px;
+}
+
+.highlight p {
+    color: #666;
+    font-size: 14px;
+}
+
+
+/* ---------- DARK MODE ABOUT ---------- */
+
+body.dark-mode .highlight {
+    background: #1f2937;
+}
+
+body.dark-mode .highlight p {
+    color: #d1d5db;
+}
+
+
+/* ---------- MOBILE ABOUT ---------- */
+
+@media (max-width: 700px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+}
