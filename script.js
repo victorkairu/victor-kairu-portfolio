@@ -1,87 +1,104 @@
-const menuButton = document.getElementById("menu-button");
-const navMenu = document.getElementById("nav-menu");
+document.addEventListener("DOMContentLoaded", function () {
 
-menuButton.addEventListener("click", function () {
+    // =========================
+    // MOBILE MENU
+    // =========================
 
-    navMenu.classList.toggle("active");
+    const menuButton = document.getElementById("menu-button");
+    const navMenu = document.getElementById("nav-menu");
 
-});
-// ---------- DARK / LIGHT MODE ----------
-
-const themeButton = document.getElementById("theme-button");
-
-themeButton.addEventListener("click", function () {
-
-    document.body.classList.toggle("dark-mode");
-
-    if (document.body.classList.contains("dark-mode")) {
-
-        themeButton.textContent = "☀️";
-
-    } else {
-
-        themeButton.textContent = "🌙";
-
+    if (menuButton && navMenu) {
+        menuButton.addEventListener("click", function () {
+            navMenu.classList.toggle("active");
+        });
     }
 
-});
-// ---------- TYPING ANIMATION ----------
 
-const typingText = document.getElementById("typing-text");
+    // =========================
+    // DARK / LIGHT MODE
+    // =========================
 
-const words = [
-    "BSc Information Technology Student",
-    "C Programmer",
-    "C++ Programmer",
-    "Web Developer",
-    "Problem Solver"
-];
+    const themeButton = document.getElementById("theme-button");
 
-let wordIndex = 0;
-let letterIndex = 0;
-let deleting = false;
+    if (themeButton) {
+        themeButton.addEventListener("click", function () {
 
-function typeEffect() {
+            document.body.classList.toggle("dark-mode");
 
-    const currentWord = words[wordIndex];
+            if (document.body.classList.contains("dark-mode")) {
+                themeButton.textContent = "☀️";
+            } else {
+                themeButton.textContent = "🌙";
+            }
 
-    if (deleting) {
-
-        typingText.textContent =
-            currentWord.substring(0, letterIndex - 1);
-
-        letterIndex--;
-
-    } else {
-
-        typingText.textContent =
-            currentWord.substring(0, letterIndex + 1);
-
-        letterIndex++;
-
+        });
     }
 
-    let speed = deleting ? 60 : 100;
 
-    if (!deleting && letterIndex === currentWord.length) {
+    // =========================
+    // TYPING EFFECT
+    // =========================
 
-        speed = 1500;
-        deleting = true;
+    const typingText = document.getElementById("typing-text");
 
-    } else if (deleting && letterIndex === 0) {
+    if (typingText) {
 
-        deleting = false;
+        const words = [
+            "BSc Information Technology Student",
+            "Procedural Programmer",
+            "Object-Oriented Programmer",
+            "Web Developer",
+            "Problem Solver"
+        ];
 
-        wordIndex++;
+        let wordIndex = 0;
+        let letterIndex = 0;
+        let deleting = false;
 
-        if (wordIndex === words.length) {
-            wordIndex = 0;
+        function typeEffect() {
+
+            const currentWord = words[wordIndex];
+
+            if (!deleting) {
+                typingText.textContent =
+                    currentWord.substring(0, letterIndex + 1);
+
+                letterIndex++;
+
+            } else {
+
+                typingText.textContent =
+                    currentWord.substring(0, letterIndex - 1);
+
+                letterIndex--;
+            }
+
+
+            let speed = deleting ? 60 : 100;
+
+
+            if (!deleting && letterIndex === currentWord.length) {
+
+                speed = 1500;
+                deleting = true;
+
+            } else if (deleting && letterIndex === 0) {
+
+                deleting = false;
+                wordIndex++;
+
+                if (wordIndex === words.length) {
+                    wordIndex = 0;
+                }
+
+                speed = 500;
+            }
+
+
+            setTimeout(typeEffect, speed);
         }
 
-        speed = 500;
+        typeEffect();
     }
 
-    setTimeout(typeEffect, speed);
-}
-
-typeEffect();
+});
