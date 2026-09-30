@@ -546,3 +546,37 @@ body.dark-mode .highlight p {
     }
 
 }
+.profile-photo {
+    margin-right: 40px;
+    flex-shrink: 0;
+}
+
+.profile-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #2563eb;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 700px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-photo {
+        margin-right: 0;
+        margin-bottom: 25px;
+    }
+
+    .profile-photo img {
+        width: 170px;
+        height: 170px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+    }
